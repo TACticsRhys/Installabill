@@ -1,6 +1,6 @@
 Feature: Provisioning of software
 
-  Scenario Outline: Producing an installation script for OSX
+  Scenario Outline: Producing an installation script for a new mac user
     Given I am a Mac user with no software installed
     When I specify to install only <SOFTWARE>
     Then I receive an installation script for the specified software
@@ -11,10 +11,10 @@ Feature: Provisioning of software
     | slack    |
 
 
-   Scenario Outline: Software is already installed
+   Scenario Outline: Software is already installed on my mac
      Given I am a Mac User and has <SOFTWARE> installed
      When I attempt to install only <SOFTWARE>
-     Then I am notified that the software is already installed
+     Then I receive an installation script that will skip the installation
    Examples:
      | SOFTWARE |
      | git      |

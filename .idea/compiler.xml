@@ -23,6 +23,7 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="bilapp-be" />
+        <module name="installabill-backend" />
       </profile>
     </annotationProcessing>
   </component>
