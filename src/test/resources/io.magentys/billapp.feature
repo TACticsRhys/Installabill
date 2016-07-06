@@ -21,5 +21,11 @@ Feature: Provisioning of software
      | slack    |
 
 
+    Scenario: Install multiple software for OSX
+      Given I am a Mac User with no software installed
+      When I specify to install git, slack
+      Then I receive an installation script for the specified software
+
+
 
 
