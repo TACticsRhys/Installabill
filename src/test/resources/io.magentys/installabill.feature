@@ -1,9 +1,13 @@
 Feature: Provisioning of software
 
-  Scenario Outline: Producing an installation script for a new mac user
-    Given I am a Mac user with no software installed
-    When I specify to install only <SOFTWARE>
-    Then I receive an installation script for the specified software
+Graham is a Mac User with minimal technical knowledge, and has not previously installed software
+Percy is a Mac User, with strong technical knowledge, and has previously installed software on applications
+
+
+  Scenario Outline: Producing an installation script for git
+    Given Graham is a Mac user with no software installed
+    When Graham specifies to install only <git>
+    Then Graham receives an installation script for git
 
   Examples:
     | SOFTWARE |
